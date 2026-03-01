@@ -14,22 +14,24 @@ class NavbarWidget extends StatelessWidget {
         return NavigationBar(
           indicatorColor: Colors.transparent,
           backgroundColor: Colors.white,
+          elevation: 8,
+          shadowColor: Colors.black,
 
           destinations: [
-            NavigationDestination(
-              icon: Icon(Icons.person_outline, size: 40),
+            NavDestination(
+              icon: Icons.person_outline,
               label: 'Account',
-              selectedIcon: Icon(Icons.person, size: 40),
+              selectedIcon: Icons.person_outline,
             ),
-            NavigationDestination(
-              icon: Icon(Icons.search_outlined, size: 40),
+            NavDestination(
+              icon: Icons.search_outlined,
               label: 'Jobs',
-              selectedIcon: Icon(Icons.search, size: 40),
+              selectedIcon: Icons.search,
             ),
-            NavigationDestination(
-              icon: Icon(Icons.attach_money_outlined, size: 40),
+            NavDestination(
+              icon: Icons.attach_money_outlined,
               label: 'Balance',
-              selectedIcon: Icon(Icons.attach_money, size: 40),
+              selectedIcon: Icons.attach_money,
             ),
           ],
           selectedIndex: selectedPage,
@@ -38,6 +40,56 @@ class NavbarWidget extends StatelessWidget {
           },
         );
       },
+    );
+  }
+}
+
+class IconNavBarStyle extends StatelessWidget {
+  final IconData icon;
+  final bool isActive;
+  final Color color;
+
+  const IconNavBarStyle({
+    super.key,
+    required this.icon,
+    this.isActive = false,
+    this.color = const Color.fromARGB(255, 188, 188, 188),
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(icon, size: isActive ? 40 : 30, color: color);
+  }
+}
+
+class NavDestination extends StatelessWidget {
+  final IconData icon;
+  final IconData selectedIcon;
+  final Color inactiveColor;
+  final Color activeColor;
+
+  final String label;
+
+  const NavDestination({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.selectedIcon,
+
+    this.inactiveColor = const Color.fromARGB(255, 188, 188, 188),
+    this.activeColor = Colors.black,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return NavigationDestination(
+      icon: IconNavBarStyle(icon: icon, color: inactiveColor, isActive: false),
+      selectedIcon: IconNavBarStyle(
+        icon: selectedIcon,
+        color: activeColor,
+        isActive: true,
+      ),
+      label: label,
     );
   }
 }

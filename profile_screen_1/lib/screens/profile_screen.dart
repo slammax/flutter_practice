@@ -9,6 +9,8 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 241, 241, 241),
+
         title: Text(
           'PROFILE SETTINGS',
           style: TextStyle(fontSize: 20, fontWeight: .bold),
