@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_screen_1/widgets/navbar_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -17,23 +18,7 @@ class ProfileScreen extends StatelessWidget {
         child: Padding(padding: const EdgeInsets.all(20), child: Column()),
       ),
 
-      bottomNavigationBar: NavigationBar(
-        indicatorColor: Colors.transparent,
-        destinations: [
-          NavigationDestination(
-            icon: Icon(Icons.person_outline, size: 40),
-            label: 'Account',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.search, size: 40),
-            label: 'Jobs',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.attach_money, size: 40),
-            label: 'Balance',
-          ),
-        ],
-      ),
+      bottomNavigationBar: NavbarWidget(),
     );
   }
 }
