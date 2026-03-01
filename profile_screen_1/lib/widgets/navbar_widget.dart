@@ -53,7 +53,7 @@ class IconNavBarStyle extends StatelessWidget {
     super.key,
     required this.icon,
     this.isActive = false,
-    this.color = const Color.fromARGB(255, 188, 188, 188),
+    required this.color,
   });
 
   @override
@@ -67,7 +67,6 @@ class NavDestination extends StatelessWidget {
   final IconData selectedIcon;
   final Color inactiveColor;
   final Color activeColor;
-
   final String label;
 
   const NavDestination({
@@ -75,7 +74,6 @@ class NavDestination extends StatelessWidget {
     required this.icon,
     required this.label,
     required this.selectedIcon,
-
     this.inactiveColor = const Color.fromARGB(255, 188, 188, 188),
     this.activeColor = Colors.black,
   });
