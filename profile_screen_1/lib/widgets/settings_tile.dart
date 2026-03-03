@@ -31,7 +31,9 @@ class SettingsTile extends StatelessWidget {
                 style: TextStyle(color: subtitleColor ?? Colors.grey),
               )
             : null,
-        trailing: trailing,
+        trailing:
+            trailing ??
+            const Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 25),
       ),
     );
   }
