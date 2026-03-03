@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_screen_1/widgets/navbar_widget.dart';
+import 'package:profile_screen_1/widgets/settings_section.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -19,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(children: []),
+          child: SettingsSection(children: []),
         ),
       ),
 
