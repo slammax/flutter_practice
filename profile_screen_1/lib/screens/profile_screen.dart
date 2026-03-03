@@ -17,7 +17,10 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(padding: const EdgeInsets.all(20), child: Column()),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(children: []),
+        ),
       ),
 
       bottomNavigationBar: NavbarWidget(),
