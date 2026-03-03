@@ -20,16 +20,19 @@ class SettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(leading, color: leadingColor ?? Colors.blueAccent),
-      title: Text(title),
-      subtitle: subtitle != null
-          ? Text(
-              subtitle!,
-              style: TextStyle(color: subtitleColor ?? Colors.grey),
-            )
-          : null,
-      trailing: trailing,
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: ListTile(
+        leading: Icon(leading, color: leadingColor ?? Colors.blueAccent),
+        title: Text(title, style: TextStyle(fontWeight: .bold)),
+        subtitle: subtitle != null
+            ? Text(
+                subtitle!,
+                style: TextStyle(color: subtitleColor ?? Colors.grey),
+              )
+            : null,
+        trailing: trailing,
+      ),
     );
   }
 }

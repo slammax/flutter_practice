@@ -12,7 +12,7 @@ class SettingsSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: Colors.white,
       ),
-      child: Column(children: children),
+      child: Column(crossAxisAlignment: .start, children: children),
     );
   }
 }
