@@ -24,6 +24,7 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: .start,
+            mainAxisSize: .min,
             children: [
               ProfileHeader(
                 titleName: 'Max Nikolaiev',
@@ -67,10 +68,14 @@ class ProfileScreen extends StatelessWidget {
                     leading: Icons.notifications_outlined,
                     title: 'Notification',
                     subtitle: 'Customize your notification',
-                    trailing: Switch.adaptive(
-                      activeThumbColor: Colors.blue[600],
-                      value: true,
-                      onChanged: (value) {},
+                    trailing: Transform.scale(
+                      scale: 0.6,
+                      alignment: Alignment.centerRight,
+                      child: Switch.adaptive(
+                        activeThumbColor: Colors.blue[600],
+                        value: true,
+                        onChanged: (value) {},
+                      ),
                     ),
                   ),
                   SettingsTile(
