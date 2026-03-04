@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:profile_screen_1/widgets/navbar_widget.dart';
 import 'package:profile_screen_1/widgets/profile_header.dart';
 import 'package:profile_screen_1/widgets/settings_section.dart';
+import 'package:profile_screen_1/widgets/settings_switch.dart';
 import 'package:profile_screen_1/widgets/settings_tile.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -68,15 +69,7 @@ class ProfileScreen extends StatelessWidget {
                     leading: Icons.notifications_outlined,
                     title: 'Notification',
                     subtitle: 'Customize your notification',
-                    trailing: Transform.scale(
-                      scale: 0.6,
-                      alignment: Alignment.centerRight,
-                      child: Switch.adaptive(
-                        activeThumbColor: Colors.blue[600],
-                        value: true,
-                        onChanged: (value) {},
-                      ),
-                    ),
+                    trailing: SettingsSwitch(),
                   ),
                   SettingsTile(
                     leading: Icons.help_outline,
