@@ -9,6 +9,7 @@ class SettingsTile extends StatelessWidget {
   final Color? subtitleColor;
   final Color? leadingColor;
   final Color? iconBacgroundColor;
+  final VoidCallback? onTap;
 
   const SettingsTile({
     super.key,
@@ -20,6 +21,7 @@ class SettingsTile extends StatelessWidget {
     this.leadingColor,
     this.titleColor,
     this.iconBacgroundColor,
+    this.onTap,
   });
 
   @override
@@ -47,6 +49,7 @@ class SettingsTile extends StatelessWidget {
       trailing:
           trailing ??
           const Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 17),
+      onTap: onTap,
     );
   }
 }

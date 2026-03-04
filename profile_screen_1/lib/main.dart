@@ -14,9 +14,19 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 241, 241, 241),
-      ),
 
-      home: ProfileScreen(),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromARGB(255, 241, 241, 241),
+          centerTitle: true,
+          elevation: 0,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      home: const ProfileScreen(),
     );
   }
 }
