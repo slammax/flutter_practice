@@ -5,6 +5,7 @@ class SettingsTile extends StatelessWidget {
   final String title;
   final String? subtitle;
   final Widget? trailing;
+  final Color? titleColor;
   final Color? subtitleColor;
   final Color? leadingColor;
 
@@ -16,6 +17,7 @@ class SettingsTile extends StatelessWidget {
     this.trailing,
     this.subtitleColor,
     this.leadingColor,
+    this.titleColor,
   });
 
   @override
@@ -24,7 +26,13 @@ class SettingsTile extends StatelessWidget {
       padding: const EdgeInsets.all(2.0),
       child: ListTile(
         leading: Icon(leading, color: leadingColor ?? Colors.blueAccent),
-        title: Text(title, style: TextStyle(fontWeight: .bold)),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: titleColor ?? Colors.black,
+            fontWeight: .bold,
+          ),
+        ),
         subtitle: subtitle != null
             ? Text(
                 subtitle!,
