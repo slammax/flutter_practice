@@ -26,7 +26,7 @@ class SettingsSection extends StatelessWidget {
               title,
               style: TextStyle(
                 color: Colors.grey,
-                fontSize: 25,
+                fontSize: 23,
                 fontWeight: .bold,
               ),
             ),

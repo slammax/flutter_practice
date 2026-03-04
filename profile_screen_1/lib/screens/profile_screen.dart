@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_screen_1/widgets/navbar_widget.dart';
+import 'package:profile_screen_1/widgets/profile_header.dart';
 import 'package:profile_screen_1/widgets/settings_section.dart';
 import 'package:profile_screen_1/widgets/settings_tile.dart';
 
@@ -23,6 +24,13 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
+              ProfileHeader(
+                titleName: 'Max Nikolaiev',
+                subtitleEmail: 'test@gmail.com',
+              ),
+
+              SizedBox(height: 15),
+
               SettingsSection(
                 title: 'General',
                 children: [
@@ -49,7 +57,7 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 15),
 
               SettingsSection(
                 title: 'Preference',
@@ -57,7 +65,12 @@ class ProfileScreen extends StatelessWidget {
                   SettingsTile(
                     leading: Icons.notifications_outlined,
                     title: 'Notification',
-                    subtitle: 'Customize your notification preferences',
+                    subtitle: 'Customize your notification',
+                    trailing: Switch.adaptive(
+                      activeThumbColor: Colors.blue[600],
+                      value: true,
+                      onChanged: (value) {},
+                    ),
                   ),
                   SettingsTile(
                     leading: Icons.help_outline,
