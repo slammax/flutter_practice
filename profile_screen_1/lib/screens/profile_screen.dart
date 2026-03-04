@@ -23,6 +23,7 @@ class ProfileScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
+            mainAxisAlignment: .start,
             children: [
               ProfileHeader(
                 titleName: 'Max Nikolaiev',
@@ -79,6 +80,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   SettingsTile(
                     leading: Icons.logout,
+                    iconBacgroundColor: const Color.fromARGB(83, 255, 205, 210),
                     leadingColor: const Color.fromARGB(255, 209, 20, 70),
                     title: 'Log Out',
                     titleColor: const Color.fromARGB(255, 209, 20, 70),
