@@ -2,9 +2,14 @@
 import 'package:flutter/material.dart';
 
 class SettingsSection extends StatelessWidget {
+  final String title;
   final List<Widget> children;
 
-  const SettingsSection({super.key, required this.children});
+  const SettingsSection({
+    super.key,
+    required this.children,
+    required this.title,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,7 +17,23 @@ class SettingsSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: Colors.white,
       ),
-      child: Column(crossAxisAlignment: .start, children: children),
+      child: Column(
+        crossAxisAlignment: .start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 17, left: 17, bottom: 10),
+            child: Text(
+              title,
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 25,
+                fontWeight: .bold,
+              ),
+            ),
+          ),
+          ...children,
+        ],
+      ),
     );
   }
 }

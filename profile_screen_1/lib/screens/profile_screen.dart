@@ -22,18 +22,8 @@ class ProfileScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: SettingsSection(
+            title: 'General',
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 17, left: 17, bottom: 10),
-                child: Text(
-                  'General',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 25,
-                    fontWeight: .bold,
-                  ),
-                ),
-              ),
               SettingsTile(
                 leading: Icons.person_outline,
                 title: 'Edit Profile',
